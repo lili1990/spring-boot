@@ -1,9 +1,22 @@
 package com.lili.service;
 
+import com.lili.models.User;
+
+import java.util.List;
+
 /**
  * Created by lili19289 on 2016/12/26.
  */
 public interface UserService {
+
+    /**
+     * 查询user
+     * @param id
+     * @return
+     */
+    User get(long id);
+
+    List<User> fetchUsers(Integer page,Integer pageSize);
 
     /**
      * 新增一个用户

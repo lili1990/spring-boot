@@ -3,18 +3,10 @@ package com.lili.models;
 /**
  * Created by lili19289 on 2016/12/23.
  */
-public class User {
-    private Long id;
+public class User extends BaseModel{
     private String user_name;
     private Integer age;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getUser_name() {
         return user_name;
