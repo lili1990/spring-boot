@@ -1,7 +1,6 @@
-package com.lili.controller;
+package com.lili.jdbc.controller;
 
-import com.lili.exception.MyException;
-import org.springframework.ui.ModelMap;
+import com.lili.jdbc.exception.MyException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

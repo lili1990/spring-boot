@@ -10,6 +10,7 @@
 		<module>spring-boot-jdbc</module>
 		<module>spring-boot-common</module>
 		<module>spring-boot-thymeleaf</module>
+		<module>spring-boot-jpa</module>
 	</modules>
 	<packaging>pom</packaging>
 
