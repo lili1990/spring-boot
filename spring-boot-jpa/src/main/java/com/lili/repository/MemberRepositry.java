@@ -16,9 +16,9 @@ import java.util.List;
  */
 public interface MemberRepositry extends JpaRepository<Member, Long> {
 
-    Member findByName(String name);
+    Member findByusername(String name);
 
-//    @Query("select m from Member m where m.username=:name")
-    Member findUser(@Param("name") String name);
+    @Query("select m from Member m where m.username=:username and m.isDeleted=false")
+    Member findMember(@Param("username") String username);
 
 }
