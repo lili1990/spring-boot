@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author lili
  * @date 2019/1/2
- * @description
+ * @description 改启动类没有配置文件
  */
 @SpringBootApplication
 public class Application {
