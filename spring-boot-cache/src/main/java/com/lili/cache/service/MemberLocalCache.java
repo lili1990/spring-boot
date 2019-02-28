@@ -24,13 +24,25 @@ public class MemberLocalCache {
 
 
 
-    public static final String  CACHE_NAME  = "MemberLocalCache";
+    private static final String  CACHE_NAME  = "MemberLocalCache";
+
+    private static final Object NULL_OBJRCT = new Object();
 
 
-    @Cacheable(value = CACHE_NAME, key = "#p0", unless = "#result == null",cacheManager = "ehCacheManager")
+
+    /**
+     * 防止缓存击穿,null值也要存储
+     * @param memberId
+     * @return
+     */
+    @Cacheable(value = CACHE_NAME, key = "#p0",cacheManager = "ehCacheManager")
     public Member getMermber(Long memberId){
         LOGGER.info("-------------------get member from ehcache-----------------");
-        return memberRedisCache.getMermber(memberId);
+        Member member =  memberRedisCache.getMermber(memberId);
+        if(member == null){
+            return (Member) NULL_OBJRCT;
+        }
+        return member;
     }
 
 }

@@ -40,6 +40,7 @@ public class MemberController {
     @RequestMapping(value = "/info",method = RequestMethod.GET)
     public Member getMemberByName(@ApiParam(value = "用户ID", required = false) @RequestParam Long memberId){
         Member member =memberLocalCache.getMermber(memberId);
-        return member;
+//        Member member= memberRepositry.getOne(memberId);
+        return member ;
     }
 }
